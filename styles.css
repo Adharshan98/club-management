@@ -1,0 +1,151 @@
+/* Global reset & base styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+/* Navbar styling */
+.navbar {
+  background: #007acc;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+}
+.navbar .nav-links a:hover {
+  text-decoration: underline;
+}
+/* Card styling */
+.card {
+  max-width: 800px;
+  background: #fff;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* Form elements */
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #005f99;
+}
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+table th {
+  background: #007acc;
+  color: #fff;
+}
+/* Small action buttons */
+button.small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: #eee;
+}
+button.small:hover {
+  background: #ddd;
+}
+/* Login page */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #007acc, #00b7ff);
+}
+.login-container {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+.login-container h2 {
+  margin-bottom: 1rem;
+  color: #007acc;
+}
+.input-group {
+  margin: 1rem 0;
+  text-align: left;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-container button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-container button:hover {
+  background: #005f99;
+}
+.demo-box {
+  margin-top: 1.5rem;
+  background: #eef6fb;
+  padding: 1rem;
+  border: 1px solid #cce6f5;
+  border-radius: 5px;
+}
+.info-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}

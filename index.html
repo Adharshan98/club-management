@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <h2>🔒Login</h2>
+    <form onsubmit="return login(event)">
+      <div class="input-group">
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter username" required />
+      </div>
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password" required />
+      </div>
+      <button type="submit">Sign In</button>
+    </form>
+
+    <div class="demo-box">
+      🔑 <strong>Demo Credentials:</strong><br>
+      Username: <strong>admin</strong><br>
+      Password: <strong>admin123</strong>
+    </div>
+    <p class="info-text">Use the above demo credentials to explore the project.</p>
+  </div>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      if(user === "admin" && pass === "admin123") {
+        alert("Login successful!");
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Invalid credentials. Try admin / admin123");
+      }
+    }
+  </script>
+</body>
+</html>

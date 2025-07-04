@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Club Management</div>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create.html">Create</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📚 Clubs List</h2>
+    <input type="text" id="search" placeholder="Search clubs..." onkeyup="filterClubs()">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Club Name</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>President</th>
+          <th>Faculty</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="clubTable">
+        <tr>
+          <td>Code Club</td>
+          <td>Programming activities</td>
+          <td>Technical</td>
+          <td>Mukesh</td>
+          <td>Prof. Smith</td>
+          <td>
+            <button class="small">View</button>
+            <button class="small">Edit</button>
+            <button class="small">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Dance Club</td>
+          <td>Stage performances</td>
+          <td>Cultural</td>
+          <td>Jack</td>
+          <td>Prof. George</td>
+          <td>
+            <button class="small">View</button>
+            <button class="small">Edit</button>
+            <button class="small">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<script>
+  function filterClubs() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let rows = document.querySelectorAll("#clubTable tr");
+    rows.forEach(row => {
+      let text = row.textContent.toLowerCase();
+      row.style.display = text.includes(input) ? "" : "none";
+    });
+  }
+
+  function logout() {
+    alert("Logged out successfully!");
+    window.location.href = "index.html";
+  }
+</script>
+</body>
+</html>

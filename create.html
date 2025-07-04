@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Club</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Club Management</div>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create.html">Create</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>➕ Create New Club</h2>
+    <form onsubmit="createClub(event)">
+      <label>Club Name:</label>
+      <input type="text" placeholder="Enter club name" required>
+      <label>Description:</label>
+      <input type="text" placeholder="Enter description" required>
+      <label>Category:</label>
+      <input type="text" placeholder="Technical, Cultural..." required>
+      <label>President:</label>
+      <input type="text" placeholder="President name" required>
+      <label>Faculty Coordinator:</label>
+      <input type="text" placeholder="Faculty name" required>
+      <button type="submit">Create Club</button>
+    </form>
+  </div>
+
+<script>
+  function createClub(e) {
+    e.preventDefault();
+    alert("✅ Club Created Successfully!");
+    window.location.href = "dashboard.html";
+  }
+
+  function logout() {
+    alert("Logged out successfully!");
+    window.location.href = "index.html";
+  }
+</script>
+</body>
+</html>
